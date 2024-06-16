@@ -1,0 +1,494 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    scrollbar-width: none;
+}
+
+#vue-produit {
+    display: flex;
+    background-color: #edece9;
+    width: 70%;
+    height: 100vh;
+    /* padding-bottom: 120px; */
+    overflow: hidden; /* Cache le défilement */
+    align-items: center;
+       
+
+}
+
+#flecheG, #flecheD {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 80%;
+    
+}
+
+#flecheG:hover, #flecheD:hover {
+    opacity: 100%;
+    scale: 105%;
+    
+}
+
+#flecheG {
+    /* margin-left: 20px; */
+    position: relative;
+    left: 20px;
+}
+
+#flecheD {
+    /* margin-right: 20px; */
+    position: relative; 
+    right:20px;
+}
+
+#vueOptions {
+    height: 100%;
+    max-height: 1000px; 
+    width: 30%;
+    padding: 20px;
+    /* margin-top: 20px; */
+    overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+#vueRecap {
+    height: 100%;
+    width: 30%;
+    padding: 20px;
+    padding-bottom: 400px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    margin-bottom: 200px;
+    position: sticky; /* Utilisez "sticky" au lieu de "fixed" */
+    top: 0;
+    overflow-y: auto; /* Autorise le défilement vertical si le contenu dépasse la hauteur */
+    max-height: 100vh; /* Limitez la hauteur pour éviter le débordement */
+  
+}
+
+
+
+
+#page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+     }
+
+#imageAffichee {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#imgProduit{
+    width: 100%;
+    margin-right: -50px;
+    margin-left: -40px;
+}
+
+
+
+
+img {
+    width: 70%;
+    transition: transform .1s;
+}
+
+
+h3, h2, h4 {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+h4 {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+h3 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 36px;
+    margin-top: 100px;
+}
+
+p {
+    text-align: center;
+    font-size: small;
+}
+
+#buttonColor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+
+#buttonColor button {
+    width: 48px;
+    height: 48px;
+    /* display: inline-block; */
+    cursor: pointer;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    border: none;
+    
+}
+
+#RAL7016 {
+    background-color: #353c44;
+}
+
+#RAL9016 {
+    background-color: #f7f7f7;
+}
+
+#Champ {
+    background-color: #D4CBAF;
+
+}
+
+#RAL7035 {
+    background-color: #BDBDBF;
+}
+
+#RAL9005 {
+    background-color: #131314;
+}
+
+#Argent {
+    background-color: #D9D9D9;
+}
+
+
+.active, .fixe {
+    box-shadow: 0px 0px 1px 4px #FA6B3B; 
+    border-style: none;
+    
+}
+button {
+    padding: 2px;
+    cursor: pointer;
+}
+
+#typeOuverture {
+        margin: auto;
+        margin-top: 20%;
+        margin-bottom: 35%;
+
+
+}
+#ouvertures {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+        gap: 15px;
+}
+
+ 
+
+
+#typeModele {
+        margin: auto;
+        margin-top: 15%;
+        margin-bottom: 25%;
+
+}
+
+#modeles1V,
+#modeles2V,
+#modeleFixe {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 15px;
+}
+
+#modeles1V img, 
+#modeles2V img,
+#modeleFixe img,
+#ouvertures img {
+        width: 135px;
+        height: 135px;
+        margin-bottom: 1%;
+        border: 2px solid #F1F1EA;
+        border-radius: 8px;
+        cursor: pointer;
+}
+
+
+
+
+
+
+
+#typeFinition {
+        margin: auto;
+        margin-top: 30%;
+        margin-bottom: 25%;
+}
+
+#typePoignee {
+        /* margin: auto; */
+        margin-top: 30%;
+        margin-bottom: 25%
+            
+}
+
+#poigneesPrefal, #poigneesTechnal, #sansPoignee {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 15px;
+}
+
+#poigneesPrefal img, #poigneesTechnal img, #sansPoignee img {
+    width: 135px;
+    height: 135px;
+    margin-top: -3px;
+    margin-bottom: 1%;
+    border: 2px solid #F1F1EA;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+#enregistrerProjet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+#save {
+    width: 382px;
+    height: 50px;
+    background-color: #383e42;
+    color: white;
+    margin-bottom: 500px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#save:hover {
+    scale: 102%;
+}
+
+
+
+#imageRecap {
+    width: 100%;
+    height: 100%;
+    margin : 10px;
+   
+}
+
+
+@media(max-width:810px){
+    #page{
+        /* flex-direction: column; */
+        margin-left: -39px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+        
+    }
+    #vue-produit{
+        width: 100%;
+        /* margin-left: -20px; */
+        height: 30%;
+    }
+    #imgProduit{
+        width: 100%;
+    }
+    #vueOptions, #vueRecap{
+        width: 100%;
+        
+    #ouvertures {
+        display: flex;
+        justify-content: center;
+        /* margin-right: 25px; */
+    }
+
+    #ouvertures img, #modeles1v img {
+        width: 28%;
+        
+    }
+
+
+    #vueOptions {
+        margin: 0;
+        margin-top: 0px;
+    }
+
+    #save, #vueRecap {
+        margin-bottom: 900px;
+    }
+    
+    form {
+        margin-bottom: 900px;
+    }
+        
+    }
+
+}
+
+#back {
+    width: 115px;
+    height: 52px;
+    cursor: pointer;
+}
+
+#save{
+    margin: bottom 200px;
+}
+
+
+#telecharger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#buttonTelecharger {
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: "Inter", sans-serif;
+  }
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+  width: 100%; /* Largeur à 100% du conteneur */
+  height: 60px;
+  padding: 10px; /* Ajoute un peu d'espace intérieur */
+  margin-bottom: 15px; /* Espacement entre les champs */
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 1px; /* Coins arrondis */
+  transition: border-color 0.3s ease; /* Transition de couleur de bordure */
+}
+
+#descriptionProjet {
+    width: 100%;
+}
+
+#titreDevis {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+#sousTitreDevis {
+    margin-top: 14px;
+    font-size: medium;
+}
+
+#demandezVotreDevis {
+    margin-bottom: -1px;
+}
+
+#recapOptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #D6D5CB;
+    padding : 0px 20px 20px 20px;
+    padding-bottom: 0px;
+    margin-top: 20px;
+    border-bottom: none;
+
+}
+
+#contentPDF {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -10px;
+    display: none;
+    padding: auto;
+    
+
+}
+
+#paragraphe1 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-right: 40px;
+    padding-left : 40px;
+    
+}
+
+#paragraphe1 p {
+    font-size: 15px;
+    
+}
+
+#telecharger {
+    border: 1px solid #D6D5CB;
+    border-top: none;
+    padding: 20px;
+    padding-top: 50px;
+    margin-top: -10px;
+}
+
+table, caption, th, td {
+
+    border: 1px solid #D6D5CB;
+    border-collapse: collapse;
+    padding: 8px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
+    }
+
+#logoPDF {
+width: 133px;
+height: 18.74px;
+margin-top: 50px;
+
+}
+
+#buttonTelecharger {
+    width: 100%
+}
+
+#texteOuverture, #texteModele,  #textePoignee {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#sousTitreOuverture, #sousTitreModele, #paragraphePoignee {
+    font-size: 17px;
+}
+
+
+
+#paragrapheSelect, #paragrapheModele, #sousTitrePoignee, #paragrapheFinition  {
+    font-size: 15px;
+
+}
