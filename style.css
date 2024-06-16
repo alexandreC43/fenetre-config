@@ -305,11 +305,19 @@ button {
 
 
 @media(max-width:810px){
+    #vueRecap {
+        margin-left: 33px;
+    }
+    }
+
+
+
+@media(max-width:810px){
     #page{
         /* flex-direction: column; */
-        margin-left: -39px;
-        padding-left: 10px;
-        padding-right: 10px;
+        margin-left: -26px;
+        /* padding-left: 10px;
+        padding-right: 10px; */
         
         
     }
@@ -321,8 +329,10 @@ button {
     #imgProduit{
         width: 100%;
     }
-    #vueOptions, #vueRecap{
+    #vueOptions, #vueRecap {
         width: 100%;
+        
+        
 
         
     #ouvertures {
@@ -331,16 +341,12 @@ button {
         /* margin-right: 25px; */
     }
 
-    #ouvertures img, #modeles1v img {
+    #ouvertures img {
         width: 28%;
         
     }
 
-
-    #vueOptions {
-        margin: 0;
-        margin-top: 0px;
-    }
+ 
 
     #save, #vueRecap {
         margin-bottom: 900px;
