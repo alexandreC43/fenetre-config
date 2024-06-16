@@ -7,6 +7,11 @@
     scrollbar-width: none;
 }
 
+i {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
 #vue-produit {
     display: flex;
     background-color: #edece9;
