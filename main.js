@@ -164,6 +164,13 @@ selectFixe.addEventListener("click", function () {
   rendreActif(selectFixe)
   rendreInactif(select2V)
   rendreInactif(select1V)
+
+  rendreInactif(FYM1V)
+  rendreInactif (FYM2V)
+  rendreInactif (FYA1V)
+  rendreInactif (FYA2V)
+  rendreInactif (cache1V)
+  rendreInactif (cache2V)
   afficherElem ([modeleFixe, sansPoignee])
   masquerElem ([modeles2V, modeles1V, poigneesPrefal, poigneesTechnal])
   modifierTexte (titreOuverture, "Fixe")
@@ -173,6 +180,7 @@ selectFixe.addEventListener("click", function () {
   modifierTexte (titrePoignee, "Pas de poignée")
   modifierTexte(sousTitrePoignee, "")
   modifierTexte(paragraphePoignee, "")
+  modifierTexte(titreModele, "Technal Soleal Fixe")
   afficherImage();
 });
 
@@ -180,13 +188,20 @@ select1V.addEventListener("click", function () {
   sessionStorage.setItem("modele", "modele1VFYM");
   afficherImage("modele1VFYM", "7016", "poignee1");
   rendreActif(select1V)
+  rendreActif (FYM1V)
+  rendreInactif (FYM2V)
+  rendreInactif (FYA1V)
+  rendreInactif (FYA2V)
   rendreInactif(select2V)
   rendreInactif(selectFixe)
+  rendreInactif(cache1V)
+  rendreInactif(cache2V)
   afficherElem ([modeles1V, poigneesTechnal])
-  masquerElem ([modeles2V,modeleFixe, sansPoignee])
+  masquerElem ([modeles2V,modeleFixe, sansPoignee, poigneesPrefal])
   modifierTexte (titreOuverture, "1 Vantail")
   modifierTexte (paragrapheSelect, "Ouverture à la française, et oscillo-battante possible.")
   modifierTexte (sousTitreOuverture, "Fenêtre à Frappe")
+  modifierTexte (titreModele, "Technal Soleal FYM")
   afficherImage();
 });
 
@@ -195,13 +210,19 @@ select2V.addEventListener("click", function () {
   rendreActif(select2V)
   rendreInactif(select1V)
   rendreInactif(selectFixe)
-  // rendreInactif(FYA2V)
+
   rendreActif(FYM2V)
+  rendreInactif (FYM1V)
+  rendreInactif (FYA1V)
+  rendreInactif (FYA2V)
+  rendreInactif(cache1V)
+  rendreInactif (cache2V)
   afficherElem ([modeles2V, poigneesTechnal])
-  masquerElem ([modeles1V, modeleFixe, sansPoignee])
+  masquerElem ([modeles1V, modeleFixe, sansPoignee, poigneesPrefal])
   modifierTexte (titreOuverture, "2 Vantaux")
   modifierTexte (paragrapheSelect, "Ouverture à la française, et oscillo-battante possible sur un ouvrant.")
   modifierTexte (sousTitreOuverture, "Fenêtre à Frappe")
+  modifierTexte (titreModele, "Technal Soleal FYM")
   afficherImage();
   
 });
