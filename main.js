@@ -186,7 +186,11 @@ selectFixe.addEventListener("click", function () {
 
 select1V.addEventListener("click", function () {
   sessionStorage.setItem("modele", "modele1VFYM");
+  sessionStorage.setItem("poignee", "poignee1");
   afficherImage("modele1VFYM", "7016", "poignee1");
+  
+  rendreActif(poigneeTechnal1)
+  rendreInactif(poigneeTechnal2)
   rendreActif(select1V)
   rendreActif (FYM1V)
   rendreInactif (FYM2V)
@@ -201,6 +205,8 @@ select1V.addEventListener("click", function () {
   modifierTexte (titreOuverture, "1 Vantail")
   modifierTexte (paragrapheSelect, "Ouverture à la française, et oscillo-battante possible.")
   modifierTexte (sousTitreOuverture, "Fenêtre à Frappe")
+  modifierTexte (titrePoignee, "Poignée Sélection Carrée")
+  modifierTexte (sousTitrePoignee, "Design sobre et élégant. Prise en main ergonomique. <br> Une version à clé pour plus de sécurité est disponible.")
   modifierTexte (titreModele, "Technal Soleal FYM")
   afficherImage();
 });
@@ -210,7 +216,8 @@ select2V.addEventListener("click", function () {
   rendreActif(select2V)
   rendreInactif(select1V)
   rendreInactif(selectFixe)
-
+  rendreActif(poigneeTechnal1)
+  rendreInactif(poigneeTechnal2)
   rendreActif(FYM2V)
   rendreInactif (FYM1V)
   rendreInactif (FYA1V)
@@ -222,6 +229,8 @@ select2V.addEventListener("click", function () {
   modifierTexte (titreOuverture, "2 Vantaux")
   modifierTexte (paragrapheSelect, "Ouverture à la française, et oscillo-battante possible sur un ouvrant.")
   modifierTexte (sousTitreOuverture, "Fenêtre à Frappe")
+  modifierTexte (titrePoignee, "Poignée Sélection Carrée")
+  modifierTexte (sousTitrePoignee, "Design sobre et élégant. Prise en main ergonomique. <br> Une version à clé pour plus de sécurité est disponible.")
   modifierTexte (titreModele, "Technal Soleal FYM")
   afficherImage();
   
@@ -229,6 +238,9 @@ select2V.addEventListener("click", function () {
 
 FYM1V.addEventListener("click", function() {
   sessionStorage.setItem("modele", "modele1VFYM");
+  sessionStorage.setItem("poignee", "poignee1");
+  rendreActif(poigneeTechnal1)
+  rendreInactif(poigneeTechnal2)
   rendreActif(FYM1V)
   rendreInactif(FYM2V)
   rendreInactif(FYA1V)
@@ -238,6 +250,7 @@ FYM1V.addEventListener("click", function() {
   modifierTexte (titreModele, "Technal Soleal FYM")
   modifierTexte (paragrapheModele, "Fenêtre de style contemporain, à ouvrant minimal <br> pour maximiser le clair de jour.</p>")
   modifierTexte (sousTitrePoignee, "Design sobre et élégant. Prise en main ergonomique. <br> Une version à clé pour plus de sécurité est disponible.")
+  modifierTexte (titrePoignee, "Poignée Sélection Carrée")
   afficherImage();
   afficherElem([poigneesTechnal])
   masquerElem([poigneesPrefal])
@@ -246,6 +259,9 @@ FYM1V.addEventListener("click", function() {
 
 FYA1V.addEventListener("click", function() {
   sessionStorage.setItem("modele", "modele1VFYA");
+  sessionStorage.setItem("poignee", "poignee1");
+  rendreActif(poigneeTechnal1)
+  rendreInactif(poigneeTechnal2)
   rendreActif(FYA1V)
   rendreInactif(FYM2V)
   rendreInactif(FYM1V)
@@ -254,6 +270,7 @@ FYA1V.addEventListener("click", function() {
   rendreInactif(cache2V)
   modifierTexte (titreModele, "Technal Soleal FYA")
   modifierTexte (paragrapheModele, "Fenêtre de style traditionnel, à ouvrant apparent.")
+  modifierTexte (titrePoignee, "Poignée Sélection Carrée")
   modifierTexte (sousTitrePoignee, "Design sobre et élégant. Prise en main ergonomique. <br> Une version à clé pour plus de sécurité est disponible.")
   afficherImage();
   afficherElem([poigneesTechnal])
@@ -263,6 +280,9 @@ FYA1V.addEventListener("click", function() {
 
 FYM2V.addEventListener("click", function() {
   sessionStorage.setItem("modele", "modele2VFYM");
+  sessionStorage.setItem("poignee", "poignee1");
+  rendreActif(poigneeTechnal1)
+  rendreInactif(poigneeTechnal2)
   rendreActif(FYM2V)
   rendreInactif(FYM1V)
   rendreInactif(FYA1V)
@@ -271,6 +291,7 @@ FYM2V.addEventListener("click", function() {
   rendreInactif(cache2V)
   modifierTexte (titreModele, "Technal Soleal FYM")
   modifierTexte (paragrapheModele, "Fenêtre de style contemporain, à ouvrant minimal <br> pour maximiser le clair de jour.")
+  modifierTexte (titrePoignee, "Poignée Sélection Carrée")
   modifierTexte (sousTitrePoignee, "Design sobre et élégant. Prise en main ergonomique. <br> Une version à clé pour plus de sécurité est disponible.")
   afficherImage();
   afficherElem([poigneesTechnal])
@@ -280,6 +301,9 @@ FYM2V.addEventListener("click", function() {
 
 FYA2V.addEventListener("click", function() {
   sessionStorage.setItem("modele", "modele2VFYA");
+  sessionStorage.setItem("poignee", "poignee1");
+  rendreActif(poigneeTechnal1)
+  rendreInactif(poigneeTechnal2)
   rendreActif(FYA2V)
   rendreInactif(FYM2V)
   rendreInactif(FYM1V)
@@ -288,6 +312,7 @@ FYA2V.addEventListener("click", function() {
   rendreInactif(cache2V)
   modifierTexte (titreModele, "Technal Soleal FYA")
   modifierTexte (paragrapheModele, "Fenêtre de style traditionnel, à ouvrant apparent.")
+  modifierTexte (titrePoignee, "Poignée Sélection Carrée")
   modifierTexte (sousTitrePoignee, "Design sobre et élégant. Prise en main ergonomique. <br> Une version à clé pour plus de sécurité est disponible.")
   afficherImage();
   afficherElem([poigneesTechnal])
@@ -299,8 +324,11 @@ FYA2V.addEventListener("click", function() {
 
 
 cache1V.addEventListener("click", function() {
-  sessionStorage.setItem("modele", "modele1Vcache");
+  sessionStorage.setItem("modele", "modele1Vcache")
+  sessionStorage.setItem("poignee", "poignee1");
   rendreActif(cache1V)
+  rendreActif(poigneePrefal1)
+  rendreInactif(poigneePrefal2)
   rendreInactif(FYM2V)
   rendreInactif(FYM1V)
   rendreInactif(FYA1V)
@@ -308,6 +336,8 @@ cache1V.addEventListener("click", function() {
   rendreInactif(cache2V)
   modifierTexte (titreModele, "Prefal Allure")
   modifierTexte (paragrapheModele, "Fenêtre de style contemporain, à ouvrant caché <br> pour maximiser le clair de jour.")
+  modifierTexte (titrePoignee, "Poignée Toulon")
+  modifierTexte(sousTitrePoignee, "Mécanisme anti-infraction, Design contemporain.<br> Coloris Noir, Blanc, 7016. Aspect Inox et à la teinte <br> en option.")
   afficherImage();
   afficherElem([poigneesPrefal])
   masquerElem([poigneesTechnal])
@@ -315,8 +345,11 @@ cache1V.addEventListener("click", function() {
 });
 
 cache2V.addEventListener("click", function() {
-  sessionStorage.setItem("modele", "modele2Vcache");
+  sessionStorage.setItem("modele", "modele2Vcache")
+  sessionStorage.setItem("poignee", "poignee1");
   rendreActif(cache2V)
+  rendreActif(poigneePrefal1)
+  rendreInactif(poigneePrefal2)
   rendreInactif(FYM2V)
   rendreInactif(FYM1V)
   rendreInactif(FYA1V)
@@ -324,6 +357,8 @@ cache2V.addEventListener("click", function() {
   rendreInactif(cache1V)
   modifierTexte (titreModele, "Prefal Allure")
   modifierTexte (paragrapheModele, "Fenêtre de style contemporain, à ouvrant caché <br> pour maximiser le clair de jour.")
+  modifierTexte (titrePoignee, "Poignée Toulon")
+  modifierTexte(sousTitrePoignee, "Mécanisme anti-infraction, Design contemporain.<br> Coloris Noir, Blanc, 7016. Aspect Inox et à la teinte <br> en option.")
   afficherImage();
   afficherElem([poigneesPrefal])
   masquerElem([poigneesTechnal])
