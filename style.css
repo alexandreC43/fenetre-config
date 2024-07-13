@@ -17,7 +17,6 @@ i {
     background-color: #edece9;
     width: 70%;
     height: 100vh;
-    /* padding-bottom: 120px; */
     overflow: hidden; /* Cache le défilement */
     align-items: center;
        
@@ -39,13 +38,11 @@ i {
 }
 
 #flecheG {
-    /* margin-left: 20px; */
     position: relative;
     left: 20px;
 }
 
 #flecheD {
-    /* margin-right: 20px; */
     position: relative; 
     right:20px;
 }
@@ -55,7 +52,6 @@ i {
     max-height: 1000px; 
     width: 30%;
     padding: 20px;
-    /* margin-top: 20px; */
     overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
     box-sizing: border-box;
     scrollbar-width: none;
@@ -148,7 +144,6 @@ p {
 #buttonColor button {
     width: 48px;
     height: 48px;
-    /* display: inline-block; */
     cursor: pointer;
     border-radius: 100px;
     margin-bottom: 10px;
@@ -196,14 +191,9 @@ button {
         margin: auto;
         margin-top: 20%;
         margin-bottom: 35%;
+    
 
 
-}
-#ouvertures {
-        display: flex;
-        justify-content: center;
-        margin-top: 5px;
-        gap: 15px;
 }
 
  
@@ -218,7 +208,8 @@ button {
 
 #modeles1V,
 #modeles2V,
-#modeleFixe {
+#modeleFixe,
+#ouvertures {
         display: flex;
         justify-content: center;
         margin-top: 15px;
@@ -229,8 +220,8 @@ button {
 #modeles2V img,
 #modeleFixe img,
 #ouvertures img {
-        width: 135px;
-        height: 135px;
+        width: 120px;
+        height: 120px;
         margin-bottom: 1%;
         border: 2px solid #F1F1EA;
         border-radius: 8px;
@@ -264,8 +255,8 @@ button {
 }
 
 #poigneesPrefal img, #poigneesTechnal img, #sansPoignee img {
-    width: 135px;
-    height: 135px;
+    width: 120px;
+    height: 120px;
     margin-top: -3px;
     margin-bottom: 1%;
     border: 2px solid #F1F1EA;
@@ -304,26 +295,14 @@ button {
 }
 
 
-@media(max-width:810px){
-    #vueRecap {
-        margin-left: 33px;
-    }
-    }
 
 
 
 @media(max-width:810px){
-    #page{
-        /* flex-direction: column; */
-        margin-left: -26px;
-        /* padding-left: 10px;
-        padding-right: 10px; */
-        
-        
-    }
+
+  
     #vue-produit{
         width: 100%;
-        /* margin-left: -20px; */
         height: 30%;
     }
     #imgProduit{
@@ -331,22 +310,13 @@ button {
     }
     #vueOptions, #vueRecap {
         width: 100%;
-        
-        
 
         
     #ouvertures {
         display: flex;
         justify-content: center;
-        /* margin-right: 25px; */
+       
     }
-
-    #ouvertures img {
-        width: 28%;
-        
-    }
-
- 
 
     #save, #vueRecap {
         margin-bottom: 900px;
@@ -359,6 +329,10 @@ button {
     }
 
 }
+
+
+
+
 
 #back {
     width: 115px;
