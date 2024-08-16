@@ -1,480 +1,200 @@
-
 * {
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    scrollbar-width: none;
+}
+
+body {
+    background-color:#F4F4F4
+}
+
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
-    scrollbar-width: none;
 }
 
-i {
-    font-size: 12px;
-    margin-top: 15px;
+h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #2E4053;
 }
-
-#vue-produit {
-    display: flex;
-    background-color: #edece9;
-    width: 70%;
-    height: 100vh;
-    overflow: hidden; /* Cache le défilement */
-    align-items: center;
-       
-
-}
-
-#flecheG, #flecheD {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    opacity: 80%;
-    
-}
-
-#flecheG:hover, #flecheD:hover {
-    opacity: 100%;
-    scale: 105%;
-    
-}
-
-#flecheG {
-    position: relative;
-    left: 20px;
-}
-
-#flecheD {
-    position: relative; 
-    right:20px;
-}
-
-#vueOptions {
-    height: 100%;
-    max-height: 1000px; 
-    width: 30%;
-    padding: 20px;
-    overflow-y: auto; /* Ajoute une barre de défilement verticale si nécessaire */
-    box-sizing: border-box;
-    scrollbar-width: none;
-}
-
-#vueRecap {
-    height: 100%;
-    width: 30%;
-    padding: 20px;
-    padding-bottom: 400px;
-    margin-top: 20px;
-    box-sizing: border-box;
-    scrollbar-width: none;
-    margin-bottom: 200px;
-    position: sticky; 
-    top: 0;
-    overflow-y: auto; /* Autorise le défilement vertical si le contenu dépasse la hauteur */
-    max-height: 100vh;
-  
-}
-
-
-
-
-#page {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: fixed;
-     }
-
-#imageAffichee {
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-
-#imgProduit{
-    width: 100%;
-    margin-right: -50px;
-    margin-left: -40px;
-}
-
-
-
-
-img {
-    width: 70%;
-    transition: transform .1s;
-}
-
-
-h3, h2, h4 {
-    display: flex;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    justify-content: center;
-    text-align: center;
-}
-
-h4 {
-    font-weight: 600;
-    font-size: 17px;
-}
-
 h3 {
-    margin-bottom: 30px;
-    font-weight: 600;
-    font-size: 30px;
+    font-size: 1.5em;
+    color: #34495E;
 }
 
-h2 {
-    font-weight: 600;
-    font-size: 36px;
-    margin-top: 100px;
+#selectPiece {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-p {
+#salon, #chambre {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
     text-align: center;
-    font-size: small;
-}
-
-#buttonColor {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 8px;
-}
-
-#buttonColor button {
-    width: 48px;
-    height: 48px;
-    cursor: pointer;
-    border-radius: 100px;
-    margin-bottom: 10px;
-    border: none;
-    
-}
-
-#RAL7016 {
-    background-color: #353c44;
-}
-
-#RAL9016 {
-    background-color: #f7f7f7;
-}
-
-#Champ {
-    background-color: #D4CBAF;
-
-}
-
-#RAL7035 {
-    background-color: #BDBDBF;
-}
-
-#RAL9005 {
-    background-color: #131314;
-}
-
-#Argent {
-    background-color: #D9D9D9;
-}
-
-
-.active, .fixe {
-    box-shadow: 0px 0px 1px 4px #FA6B3B; 
-    border-style: none;
-    
-}
-button {
-    padding: 2px;
-    cursor: pointer;
-}
-
-#typeOuverture {
-        margin: auto;
-        margin-top: 20%;
-        margin-bottom: 35%;
-    
-
-
-}
-
- 
-
-
-#typeModele {
-        margin: auto;
-        margin-top: 15%;
-        margin-bottom: 25%;
-
-}
-
-#modeles1V,
-#modeles2V,
-#modeleFixe,
-#ouvertures {
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-        gap: 15px;
-}
-
-#modeles1V img, 
-#modeles2V img,
-#modeleFixe img,
-#ouvertures img {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 1%;
-        border: 2px solid #F1F1EA;
-        border-radius: 8px;
-        cursor: pointer;
+    height: calc(100vh - 30px); /* Ajuste la hauteur pour tenir compte de la marge */
 }
 
 
 
 
 
-
-
-#typeFinition {
-        margin: auto;
-        margin-top: 30%;
-        margin-bottom: 25%;
+#vue-image {
+    width: 70%;
+    /* overflow: hidden;  */
+    position: relative; /* Relative positioning to align correctly */
 }
 
-#typePoignee {
-        /* margin: auto; */
-        margin-top: 30%;
-        margin-bottom: 25%
-            
-}
-
-#poigneesPrefal, #poigneesTechnal, #sansPoignee {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 15px;
-}
-
-#poigneesPrefal img, #poigneesTechnal img, #sansPoignee img {
-    width: 120px;
-    height: 120px;
-    margin-top: -3px;
-    margin-bottom: 1%;
-    border: 2px solid #F1F1EA;
-    border-radius: 8px;
-    cursor: pointer;
-    
-}
-#enregistrerProjet {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-}
-
-#save {
-    width: 382px;
-    height: 50px;
-    background-color: #383e42;
-    color: white;
-    margin-bottom: 500px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-#save:hover {
-    scale: 102%;
-}
-
-
-
-#imageRecap {
-    width: 100%;
-    height: 100%;
-    margin : 10px;
+#vue-options {
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-y: auto; /* Permet le défilement vertical */
+    height: 100%; /* Occupe toute la hauteur disponible */
+    margin-right: 20px;
    
 }
 
-
-
-
-
-@media(max-width:810px){
-
-  
-    #vue-produit{
-        width: 100%;
-        height: 30%;
-    }
-    #imgProduit{
-        width: 100%;
-    }
-    #vueOptions, #vueRecap {
-        width: 100%;
-
-        
-    #ouvertures {
-        display: flex;
-        justify-content: center;
-       
-    }
-
-    #save, #vueRecap {
-        margin-bottom: 900px;
-    }
-    
-    form {
-        margin-bottom: 900px;
-    }
-        
-    }
-
-}
-
-
-
-
-
-#back {
-    width: 115px;
-    height: 52px;
-    cursor: pointer;
-}
-
-#save{
-    margin: bottom 200px;
-}
-
-
-#telecharger {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
-
-#buttonTelecharger {
-    cursor: pointer;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-family: "Inter", sans-serif;
-  }
-
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form textarea {
-  width: 100%; /* Largeur à 100% du conteneur */
-  height: 60px;
-  padding: 10px; /* Ajoute un peu d'espace intérieur */
-  margin-bottom: 15px; /* Espacement entre les champs */
-  border: 1px solid #ccc; /* Bordure grise */
-  border-radius: 1px; /* Coins arrondis */
-  transition: border-color 0.3s ease; /* Transition de couleur de bordure */
-}
-
-#descriptionProjet {
+#imageBaseSalon, #imageBaseChambre {
     width: 100%;
 }
 
-#titreDevis {
-    margin-top: 100px;
-    margin-bottom: 50px;
+button.active {
+    box-shadow: 0px 0px 15px rgba(250, 107, 59, 0.7);
+    border: 2px solid #FA6B3B;
 }
 
-#sousTitreDevis {
-    margin-top: 14px;
-    font-size: medium;
+#salon-sol, #salon-peinture, #chambre-sol, #chambre-peinture {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonnes de largeur égale */
+    gap: 10px; /* Espace entre les boutons */
+    width: 100%; /* Ajuste la largeur de la grille */
+    justify-items: center; /* Centre les boutons horizontalement */
 }
 
-#demandezVotreDevis {
-    margin-bottom: -1px;
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5D6D7E;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90px;
+    height: 90px;
 }
 
-#recapOptions {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #D6D5CB;
-    padding : 0px 20px 20px 20px;
-    padding-bottom: 0px;
-    margin-top: 20px;
-    border-bottom: none;
-
+#image-container img {
+    position: absolute;
+    /* top: 235px; */
+    left: 20px;
+    width: 95%;
+    height: auto;
+    border-radius: 8px;
+    z-index: 1; /* S'assure que l'image de base reste visible */
 }
 
-#contentPDF {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: -10px;
-    display: none;
-    padding: auto;
-    
-
+#sol-overlay-salon {
+    opacity: 1; /* Rend les images de sol superposées opaques */
+    z-index: 2; /* Positionne les images de sol au-dessus de l'image de base */
 }
 
-#paragraphe1 {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    padding-right: 40px;
-    padding-left : 40px;
-    
+#peinture-overlay-salon {
+    opacity: 1; /* Rend les images de peinture superposées opaques */
+    z-index: 3; /* Positionne les images de peinture au-dessus des images de sol */
 }
 
-#paragraphe1 p {
-    font-size: 15px;
-    
+#artens-casablanca-salon, #artens-casablanca-chambre {
+    background-image: url("images/vignette-artens-casablanca.png");
+    color: #171717;
 }
 
-#telecharger {
-    border: 1px solid #D6D5CB;
-    border-top: none;
-    padding: 20px;
-    padding-top: 50px;
-    margin-top: -10px;
+#aubade-abetone-salon, #aubade-abetone-chambre  {
+    background-image: url("images/vignette-aubade-abetone.jpg");
+    color: #171717;
 }
 
-table, caption, th, td {
+#artens-branch-salon, #artens-branch-chambre {
+    background-image: url("images/vignette-artens-carrelage bois gris.png");
+    color: #171717;
+}
 
-    border: 1px solid #D6D5CB;
-    border-collapse: collapse;
-    padding: 8px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    
+#artens-parquet-chene-blond-salon, #artens-parquet-chene-blond-chambre{
+    background-image: url("images/vignette-artens-parquet-chene-blond.png");
+    color: #171717;
+}
+
+
+
+
+#sol-overlay-salon, #peinture-overlay-salon, #sol-overlay-chambre, #peinture-overlay-chambre {
+    transition: opacity 0.5s ease-in-out;
+}
+
+button:active {
+    transform: scale(0.95);
+    transition: transform 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* Media Query pour les smartphones */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.2em;
     }
 
-#logoPDF {
-width: 133px;
-height: 18.74px;
-margin-top: 50px;
+    #selectPiece {
+        flex-direction: column;
+        gap: 20px;
+    }
 
+    #salon, #chambre {
+        flex-direction: column;
+        height: auto; /* Permet aux sections de s'ajuster en hauteur */
+    }
+
+    #vue-image {
+        width: 100%; /* Prend toute la largeur disponible */
+        margin-bottom: 20px;
+    }
+
+    #vue-options {
+        width: 100%; /* Prend toute la largeur disponible */
+        margin-right: 0; /* Supprime la marge sur la droite */
+        margin-top: 250px;
+    }
+
+    #salon-sol, #salon-peinture, #chambre-sol, #chambre-peinture {
+        grid-template-columns: repeat(2, 1fr); /* Réduit à 2 colonnes pour les petits écrans */
+        gap: 5px; /* Réduit l'espace entre les boutons */
+    }
+
+    button {
+        width: 100%; /* Ajuste la largeur des boutons pour occuper toute la place */
+        height: auto; /* Permet aux boutons de s'adapter à leur contenu */
+        padding: 15px;
+        font-size: 14px; /* Réduit la taille de la police */
+    }
+    
+    #image-container img {
+        width: 100%; /* S'assure que l'image occupe toute la largeur disponible */
+        height: auto; /* Maintient les proportions de l'image */
+    }
 }
 
-#buttonTelecharger {
-    width: 100%
-}
-
-#texteOuverture, #texteModele,  #textePoignee {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-#sousTitreOuverture, #sousTitreModele, #paragraphePoignee {
-    font-size: 17px;
-}
-
-
-
-#paragrapheSelect, #paragrapheModele, #sousTitrePoignee, #paragrapheFinition  {
-    font-size: 15px;
-
-}
