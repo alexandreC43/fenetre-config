@@ -303,7 +303,8 @@ button {
   
     #vue-produit{
         width: 100%;
-        height: 30%;
+        height: 30vh;
+        overflow: hidden;
     }
     #imgProduit{
         width: 100%;
@@ -326,6 +327,10 @@ button {
         margin-bottom: 900px;
     }
         
+    }
+
+    #buttonTelecharger {
+        pointer-events: none; /* Rend l'image non cliquable */
     }
 
 }
